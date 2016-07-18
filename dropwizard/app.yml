@@ -1,0 +1,22 @@
+appName: app
+server:
+    applicationConnectors:
+       - type: http
+         port: 8080
+#       - type: https
+#         port: 8443
+    adminConnectors:
+       - type: http
+         port: 8081
+#       - type: https
+#         port: 8444
+
+database:
+    driverClass: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8
+    user: root
+    password: 
+    properties:
+        hibernate.dialect: org.hibernate.dialect.MySQLDialect
+        hibernate.hbm2ddl.auto: create
+        
