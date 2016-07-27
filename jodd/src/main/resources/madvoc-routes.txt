@@ -1,0 +1,2 @@
+GET / com.chf.jodd.web.rest.IndexResource#index
+GET /hello com.chf.jodd.web.rest.HelloResource#sayHello

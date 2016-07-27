@@ -1,4 +1,4 @@
-package com.chf.core;
+package com.chf.core.domain;
 
 import com.chf.core.annotation.MyAnno;
 

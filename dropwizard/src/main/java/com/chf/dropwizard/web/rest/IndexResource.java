@@ -8,9 +8,9 @@ import com.codahale.metrics.annotation.Timed;
 @Path("/")
 public class IndexResource {
 
-    @GET
-    @Timed
-    public String sayHello() {
-        return "Welcome";
-    }
+	@GET
+	@Timed
+	public String welcome() {
+		return "Welcome to Dropwizard.";
+	}
 }

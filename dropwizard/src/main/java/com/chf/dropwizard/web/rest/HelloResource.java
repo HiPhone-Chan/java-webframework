@@ -1,36 +1,39 @@
 package com.chf.dropwizard.web.rest;
 
-import javax.inject.Inject;
+import javax.annotation.ManagedBean;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
-
-import org.springframework.stereotype.Controller;
+import javax.ws.rs.core.UriInfo;
 
 import com.chf.core.domain.Resp;
 import com.chf.dropwizard.service.ResourceService;
 import com.codahale.metrics.annotation.Timed;
 
-@Controller
 @Path("/app")
 @Produces(MediaType.APPLICATION_JSON)
+@ManagedBean
 public class HelloResource {
 
-    @Inject
-    private ResourceService resourceService;
+	@Context
+	private ResourceService resourceService;
 
-    @GET
-    @Timed
-    public Resp sayHello(@QueryParam("name") String name) {
-        return new Resp(name);
-    }
+	@Context
+	private UriInfo uriInfo;
 
-    @GET
-    @Path("/r")
-    @Timed
-    public String resource() {
-        return resourceService.findAll();
-    }
+	@GET
+	@Timed
+	public Resp sayHello(@QueryParam("name") String name) {
+		return new Resp(name);
+	}
+
+	@GET
+	@Path("/r")
+	@Timed
+	public String resource() {
+		return resourceService.findAll();
+	}
 }

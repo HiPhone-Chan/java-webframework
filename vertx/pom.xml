@@ -9,7 +9,7 @@
 	<artifactId>vertx</artifactId>
 
 	<properties>
-		<vertx.version>3.3.0</vertx.version>
+		<vertx.version>3.3.2</vertx.version>
 	</properties>
 
 	<dependencies>
@@ -24,5 +24,18 @@
 			<artifactId>vertx-web</artifactId>
 			<version>${vertx.version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>io.vertx</groupId>
+			<artifactId>vertx-jdbc-client</artifactId>
+			<version>${vertx.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.vertx</groupId>
+			<artifactId>vertx-sql-common</artifactId>
+			<version>${vertx.version}</version>
+		</dependency>
+
 	</dependencies>
 </project>

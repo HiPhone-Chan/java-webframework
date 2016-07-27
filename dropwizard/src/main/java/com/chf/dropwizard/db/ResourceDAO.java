@@ -2,19 +2,12 @@ package com.chf.dropwizard.db;
 
 import java.io.Serializable;
 
-import org.hibernate.SessionFactory;
-import org.springframework.stereotype.Repository;
+import javax.inject.Singleton;
 
 import com.chf.dropwizard.domain.Resource;
 
-import io.dropwizard.hibernate.AbstractDAO;
-
-@Repository
+@Singleton
 public class ResourceDAO extends AbstractDAO<Resource> {
-
-    public ResourceDAO(SessionFactory sessionFactory) {
-        super(sessionFactory);
-    }
 
     @Override
     public Resource get(Serializable id) {

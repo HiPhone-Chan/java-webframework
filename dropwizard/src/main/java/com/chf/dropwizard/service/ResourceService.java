@@ -1,23 +1,18 @@
 package com.chf.dropwizard.service;
 
-import javax.inject.Inject;
+import javax.annotation.ManagedBean;
 
-import org.springframework.stereotype.Service;
-
-import com.chf.dropwizard.db.ResourceDAO;
-import com.chf.dropwizard.domain.Resource;
-
-@Service
+@ManagedBean
 public class ResourceService {
 
-    @Inject
-    private ResourceDAO resourceDAO;
+//    @Inject
+//    private ResourceDAO resourceDAO;
+//
+//    public Resource query(Long id) {
+//        return resourceDAO.get(id);
+//    }
 
-    public Resource query(Long id) {
-        return resourceDAO.get(id);
-    }
-    
-    public String findAll(){
+    public String findAll() {
         return "get";
     }
 

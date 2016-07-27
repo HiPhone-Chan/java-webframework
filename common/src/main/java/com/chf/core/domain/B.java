@@ -1,4 +1,4 @@
-package com.chf.core;
+package com.chf.core.domain;
 
 public class B  {
 

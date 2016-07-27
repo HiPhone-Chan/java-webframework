@@ -17,9 +17,16 @@
 		<module>dropwizard</module>
 		<module>spring-boot</module>
 		<module>common</module>
+		<module>jodd</module>
 	</modules>
 
 	<dependencies>
+
+		<dependency>
+			<groupId>com.chf</groupId>
+			<artifactId>common</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 
 		<!-- jdbc -->
 		<dependency>
@@ -28,4 +35,17 @@
 			<version>5.1.38</version>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
