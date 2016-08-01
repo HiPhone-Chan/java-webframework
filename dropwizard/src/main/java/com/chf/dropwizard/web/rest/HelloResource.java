@@ -18,8 +18,8 @@ import com.codahale.metrics.annotation.Timed;
 @ManagedBean
 public class HelloResource {
 
-	@Context
-	private ResourceService resourceService;
+//	@Context
+//	private ResourceService resourceService;
 
 	@Context
 	private UriInfo uriInfo;
@@ -34,6 +34,7 @@ public class HelloResource {
 	@Path("/r")
 	@Timed
 	public String resource() {
-		return resourceService.findAll();
+		return "test";
+//		return resourceService.findAll();
 	}
 }

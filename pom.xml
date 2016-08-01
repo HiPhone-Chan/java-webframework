@@ -9,6 +9,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
+		<plugin.assembly.version>2.6</plugin.assembly.version>
 	</properties>
 
 	<modules>
@@ -21,12 +22,6 @@
 	</modules>
 
 	<dependencies>
-
-		<dependency>
-			<groupId>com.chf</groupId>
-			<artifactId>common</artifactId>
-			<version>${project.version}</version>
-		</dependency>
 
 		<!-- jdbc -->
 		<dependency>
